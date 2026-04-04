@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人空间</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 导航 -->
+  <nav class="navbar" id="top">
+    <div class="nav-inner">
+      <a href="#top" class="logo">墨迹</a>
+      <button class="menu-btn" id="menuBtn" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">关于</a></li>
+        <li><a href="#blog">博客</a></li>
+        <li><a href="#works">作品</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 首页大字 -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">文字·代码·生活</p>
+      <h1 class="hero-title">用代码写诗，用文字记录温度</h1>
+      <p class="hero-desc">一个普通程序员的个人空间，记录技术折腾、阅读笔记和生活碎碎念。</p>
+      <div class="hero-links">
+        <a href="#blog" class="btn btn-primary">阅读文章</a>
+        <a href="#about" class="btn btn-outline">了解更多</a>
+      </div>
+    </div>
+    <div class="hero-decoration">
+      <span class="leaf">🌿</span>
+      <span class="leaf">🍃</span>
+      <span class="leaf">🌱</span>
+    </div>
+  </header>
+
+  <!-- 关于 -->
+  <section class="section" id="about">
+    <div class="container narrow">
+      <h2 class="section-title">关于我</h2>
+      <div class="about-card">
+        <div class="about-avatar">
+          <svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="35" r="18" fill="#6b5b4f"/>
+            <ellipse cx="50" cy="80" rx="30" ry="22" fill="#6b5b4f"/>
+            <circle cx="50" cy="35" r="16" fill="#f5e6d3"/>
+            <circle cx="44" cy="33" r="2" fill="#3d3229"/>
+            <circle cx="56" cy="33" r="2" fill="#3d3229"/>
+            <path d="M46 40 Q50 44 54 40" stroke="#c4956a" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <h3>你好，我是小明</h3>
+        <p>一个热爱编程和写代码的开发者。平时喜欢写写博客，鼓捣各种技术，偶尔看看书、喝喝茶。</p>
+        <p>相信技术服务于人，代码应该让生活更舒服。在这里记录我的学习、思考和折腾的过程。</p>
+        <div class="social-links">
+          <a href="https://github.com/yourname" target="_blank" title="GitHub">GitHub</a>
+          <a href="https://twitter.com/yourname" target="_blank" title="Twitter">Twitter</a>
+          <a href="mailto:hello@example.com" title="Email">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 博客 -->
+  <section class="section section-alt" id="blog">
+    <div class="container">
+      <h2 class="section-title">博客</h2>
+      <p class="section-desc">一些技术笔记和思考</p>
+      <div class="posts-grid">
+        <article class="post-card">
+          <div class="post-tag">技术</div>
+          <h3><a href="#">第一次搭建自己的网站</a></h3>
+          <p class="post-date">2026年4月1日</p>
+          <p class="post-excerpt">从零开始搭建个人网站的全过程记录，从选框架到部署上线的每一步。</p>
+          <a href="#" class="read-more">阅读全文 →</a>
+        </article>
+        <article class="post-card">
+          <div class="post-tag">随笔</div>
+          <h3><a href="#">程序员的阅读清单</a></h3>
+          <p class="post-date">2026年3月20日</p>
+          <p class="post-excerpt">这些书改变了我对编程和软件的认知，推荐给每一个热爱技术的人。</p>
+          <a href="#" class="read-more">阅读全文 →</a>
+        </article>
+        <article class="post-card">
+          <div class="post-tag">折腾</div>
+          <h3><a href="#">用 AI 工具提升开发效率</a></h3>
+          <p class="post-date">2026年3月10日</p>
+          <p class="post-excerpt">分享使用 Claude、Cursor 等 AI 工具的实际经验和最佳实践。</p>
+          <a href="#" class="read-more">阅读全文 →</a>
+        </article>
+      </div>
+      <p class="more-link"><a href="#">更多文章 →</a></p>
+    </div>
+  </section>
+
+  <!-- 作品 -->
+  <section class="section" id="works">
+    <div class="container">
+      <h2 class="section-title">作品集</h2>
+      <p class="section-desc">做过的一些项目</p>
+      <div class="works-grid">
+        <div class="work-card">
+          <div class="work-thumb">🛒</div>
+          <h3>小程序商城</h3>
+          <p>基于微信小程序的电商平台，支持商品浏览、下单和支付。</p>
+          <div class="work-tags">
+            <span>微信小程序</span><span>Node.js</span><span>MongoDB</span>
+          </div>
+          <div class="work-links">
+            <a href="#">查看演示</a>
+            <a href="#">源代码</a>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-thumb">📊</div>
+          <h3>数据可视化面板</h3>
+          <p>实时展示业务数据的仪表板，支持多种图表类型和自定义筛选。</p>
+          <div class="work-tags">
+            <span>Vue.js</span><span>ECharts</span><span>Python</span>
+          </div>
+          <div class="work-links">
+            <a href="#">查看演示</a>
+            <a href="#">源代码</a>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-thumb">🤖</div>
+          <h3>AI 助手 Bot</h3>
+          <p>基于大语言模型的智能助手，支持多轮对话和自定义知识库。</p>
+          <div class="work-tags">
+            <span>Python</span><span>LLM</span><span>FastAPI</span>
+          </div>
+          <div class="work-links">
+            <a href="#">查看演示</a>
+            <a href="#">源代码</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="section section-alt" id="contact">
+    <div class="container narrow">
+      <h2 class="section-title">联系我</h2>
+      <p class="contact-text">欢迎通过以下方式找到我，期待与你交流 🌻</p>
+      <div class="contact-grid">
+        <a href="mailto:hello@example.com" class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <strong>邮箱</strong>
+            <p>hello@example.com</p>
+          </div>
+        </a>
+        <a href="https://github.com/yourname" class="contact-item">
+          <div class="contact-icon">🐙</div>
+          <div>
+            <strong>GitHub</strong>
+            <p>@yourname</p>
+          </div>
+        </a>
+        <a href="#" class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <strong>微信</strong>
+            <p>yourname_wx</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 墨迹 · 用 ❤️ 和代码构建</p>
+    <p class="footer-host">托管于 <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
