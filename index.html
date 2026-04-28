@@ -3,187 +3,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的个人空间</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>李明远 · 简历</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- 导航 -->
-  <nav class="navbar" id="top">
-    <div class="nav-inner">
-      <a href="#top" class="logo">墨迹</a>
-      <button class="menu-btn" id="menuBtn" aria-label="菜单">
-        <span></span><span></span><span></span>
-      </button>
+
+  <!-- ======== 导航 ======== -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <span class="nav-marker">●</span>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">关于</a></li>
-        <li><a href="#blog">博客</a></li>
-        <li><a href="#works">作品</a></li>
-        <li><a href="#contact">联系</a></li>
+        <li><a href="#work" class="js-nav">经历</a></li>
+        <li><a href="#edu" class="js-nav">教育</a></li>
+        <li><a href="#skills" class="js-nav">技能</a></li>
+        <li><a href="#projects" class="js-nav">作品</a></li>
       </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- 首页大字 -->
-  <header class="hero">
-    <div class="hero-content">
-      <p class="hero-subtitle">文字·代码·生活</p>
-      <h1 class="hero-title">用代码写诗，用文字记录温度</h1>
-      <p class="hero-desc">一个普通程序员的个人空间，记录技术折腾、阅读笔记和生活碎碎念。</p>
-      <div class="hero-links">
-        <a href="#blog" class="btn btn-primary">阅读文章</a>
-        <a href="#about" class="btn btn-outline">了解更多</a>
+  <!-- ======== Hero ======== -->
+  <header class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-main">
+        <div class="hero-label">你好，我是</div>
+        <h1 class="hero-name">李 明远</h1>
+        <p class="hero-role">全栈开发 · UI/UX 设计师</p>
+        <p class="hero-bio">
+          热爱将复杂问题转化为简洁优雅的解决方案。专注于 Web 应用开发、用户界面设计，
+          以及前后端一体化架构设计。持续探索现代前端技术在前业场景中的创新应用。
+        </p>
+        <div class="hero-actions">
+          <a href="mailto:demo@example.com" class="btn-primary">
+            <i class="fas fa-paper-plane"></i> 联系我
+          </a>
+          <a href="#projects" class="btn-ghost js-nav">
+            看作品 <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="hero-contact">
+          <a href="mailto:demo@example.com" aria-label="邮箱"><i class="fas fa-envelope"></i></a>
+          <span class="contact-pill"><i class="fas fa-phone"></i> 138-0000-1234</span>
+          <span class="contact-pill"><i class="fas fa-map-pin"></i> 北京</span>
+        </div>
       </div>
-    </div>
-    <div class="hero-decoration">
-      <span class="leaf">🌿</span>
-      <span class="leaf">🍃</span>
-      <span class="leaf">🌱</span>
+      <div class="hero-visual">
+        <div class="hero-avatar-wrap">
+          <img src="assets/avatar.jpg" alt="头像" class="hero-avatar"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="hero-avatar-fallback"><i class="fas fa-user"></i></div>
+        </div>
+        <div class="hero-deco hero-deco-1"></div>
+        <div class="hero-deco hero-deco-2"></div>
+      </div>
     </div>
   </header>
 
-  <!-- 关于 -->
-  <section class="section" id="about">
-    <div class="container narrow">
-      <h2 class="section-title">关于我</h2>
-      <div class="about-card">
-        <div class="about-avatar">
-          <svg viewBox="0 0 100 100" width="80" height="80">
-            <circle cx="50" cy="35" r="18" fill="#6b5b4f"/>
-            <ellipse cx="50" cy="80" rx="30" ry="22" fill="#6b5b4f"/>
-            <circle cx="50" cy="35" r="16" fill="#f5e6d3"/>
-            <circle cx="44" cy="33" r="2" fill="#3d3229"/>
-            <circle cx="56" cy="33" r="2" fill="#3d3229"/>
-            <path d="M46 40 Q50 44 54 40" stroke="#c4956a" stroke-width="1.5" fill="none"/>
-          </svg>
-        </div>
-        <h3>你好，我是小明</h3>
-        <p>一个热爱编程和写代码的开发者。平时喜欢写写博客，鼓捣各种技术，偶尔看看书、喝喝茶。</p>
-        <p>相信技术服务于人，代码应该让生活更舒服。在这里记录我的学习、思考和折腾的过程。</p>
-        <div class="social-links">
-          <a href="https://github.com/yourname" target="_blank" title="GitHub">GitHub</a>
-          <a href="https://twitter.com/yourname" target="_blank" title="Twitter">Twitter</a>
-          <a href="mailto:hello@example.com" title="Email">Email</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 博客 -->
-  <section class="section section-alt" id="blog">
+  <!-- ======== 工作经历 ======== -->
+  <section class="section" id="work">
     <div class="container">
-      <h2 class="section-title">博客</h2>
-      <p class="section-desc">一些技术笔记和思考</p>
-      <div class="posts-grid">
-        <article class="post-card">
-          <div class="post-tag">技术</div>
-          <h3><a href="#">第一次搭建自己的网站</a></h3>
-          <p class="post-date">2026年4月1日</p>
-          <p class="post-excerpt">从零开始搭建个人网站的全过程记录，从选框架到部署上线的每一步。</p>
-          <a href="#" class="read-more">阅读全文 →</a>
+      <h2 class="sec-title"><span class="sec-num">01</span> 工作经历</h2>
+      <div class="work-list">
+
+        <article class="work-card">
+          <div class="work-side">
+            <span class="work-year">2024.06 — 至今</span>
+            <span class="work-tag">开发</span>
+          </div>
+          <div class="work-body">
+            <h3>前端开发工程师</h3>
+            <p class="work-org">星云科技（深圳）有限公司</p>
+            <ul class="work-desc">
+              <li>负责公司核心 SaaS 产品的前端架构设计与开发，使用 React + TypeScript 技术栈</li>
+              <li>封装通用组件库，提升团队开发效率 40%，降低跨项目重复开发成本</li>
+              <li>优化首屏加载性能，LCP 从 3.2s 降至 1.1s，用户体验显著提升</li>
+            </ul>
+          </div>
         </article>
-        <article class="post-card">
-          <div class="post-tag">随笔</div>
-          <h3><a href="#">程序员的阅读清单</a></h3>
-          <p class="post-date">2026年3月20日</p>
-          <p class="post-excerpt">这些书改变了我对编程和软件的认知，推荐给每一个热爱技术的人。</p>
-          <a href="#" class="read-more">阅读全文 →</a>
+
+        <article class="work-card">
+          <div class="work-side">
+            <span class="work-year">2022.03 — 2024.05</span>
+            <span class="work-tag">设计</span>
+          </div>
+          <div class="work-body">
+            <h3>UI/UX 设计师</h3>
+            <p class="work-org">创意工坊数字科技有限公司</p>
+            <ul class="work-desc">
+              <li>负责 B 端管理后台与 C 端用户产品的界面设计，输出高保真原型与设计规范</li>
+              <li>主导设计系统从零搭建，统一 5 条产品线的视觉语言与交互模式</li>
+              <li>通过用户调研与 A/B 测试优化关键转化路径，注册转化率提升 25%</li>
+            </ul>
+          </div>
         </article>
-        <article class="post-card">
-          <div class="post-tag">折腾</div>
-          <h3><a href="#">用 AI 工具提升开发效率</a></h3>
-          <p class="post-date">2026年3月10日</p>
-          <p class="post-excerpt">分享使用 Claude、Cursor 等 AI 工具的实际经验和最佳实践。</p>
-          <a href="#" class="read-more">阅读全文 →</a>
-        </article>
+
       </div>
-      <p class="more-link"><a href="#">更多文章 →</a></p>
     </div>
   </section>
 
-  <!-- 作品 -->
-  <section class="section" id="works">
+  <!-- ======== 教育 ======== -->
+  <section class="section section--alt" id="edu">
     <div class="container">
-      <h2 class="section-title">作品集</h2>
-      <p class="section-desc">做过的一些项目</p>
-      <div class="works-grid">
-        <div class="work-card">
-          <div class="work-thumb">🛒</div>
-          <h3>小程序商城</h3>
-          <p>基于微信小程序的电商平台，支持商品浏览、下单和支付。</p>
-          <div class="work-tags">
-            <span>微信小程序</span><span>Node.js</span><span>MongoDB</span>
-          </div>
-          <div class="work-links">
-            <a href="#">查看演示</a>
-            <a href="#">源代码</a>
+      <h2 class="sec-title"><span class="sec-num">02</span> 教育背景</h2>
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-info">
+          <h3>北京信息科技大学</h3>
+          <p class="edu-major">计算机科学与技术 · 本科</p>
+          <p class="edu-date">2018 — 2022</p>
+          <p class="edu-note">在校期间参与多个 Web 开发项目，获校级优秀毕设</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== 技能 ======== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="sec-title"><span class="sec-num">03</span> 技能</h2>
+      <div class="skills-wrap">
+        <div class="skill-group">
+          <h3 class="skill-group-title">前端技术</h3>
+          <div class="skill-pills">
+            <span>React</span><span>Vue 3</span><span>TypeScript</span><span>Tailwind CSS</span>
           </div>
         </div>
-        <div class="work-card">
-          <div class="work-thumb">📊</div>
-          <h3>数据可视化面板</h3>
-          <p>实时展示业务数据的仪表板，支持多种图表类型和自定义筛选。</p>
-          <div class="work-tags">
-            <span>Vue.js</span><span>ECharts</span><span>Python</span>
-          </div>
-          <div class="work-links">
-            <a href="#">查看演示</a>
-            <a href="#">源代码</a>
+        <div class="skill-group">
+          <h3 class="skill-group-title">后端 & 工具</h3>
+          <div class="skill-pills">
+            <span>Node.js</span><span>Python</span><span>PostgreSQL</span><span>Git</span>
           </div>
         </div>
-        <div class="work-card">
-          <div class="work-thumb">🤖</div>
-          <h3>AI 助手 Bot</h3>
-          <p>基于大语言模型的智能助手，支持多轮对话和自定义知识库。</p>
-          <div class="work-tags">
-            <span>Python</span><span>LLM</span><span>FastAPI</span>
-          </div>
-          <div class="work-links">
-            <a href="#">查看演示</a>
-            <a href="#">源代码</a>
+        <div class="skill-group">
+          <h3 class="skill-group-title">设计 & 协作</h3>
+          <div class="skill-pills">
+            <span>Figma</span><span>Photoshop</span><span>Jira</span><span>Confluence</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 联系 -->
-  <section class="section section-alt" id="contact">
-    <div class="container narrow">
-      <h2 class="section-title">联系我</h2>
-      <p class="contact-text">欢迎通过以下方式找到我，期待与你交流 🌻</p>
-      <div class="contact-grid">
-        <a href="mailto:hello@example.com" class="contact-item">
-          <div class="contact-icon">📧</div>
-          <div>
-            <strong>邮箱</strong>
-            <p>hello@example.com</p>
+  <!-- ======== 项目作品 ======== -->
+  <section class="section section--alt" id="projects">
+    <div class="container">
+      <h2 class="sec-title"><span class="sec-num">04</span> 项目与荣誉</h2>
+      <div class="proj-grid">
+
+        <article class="proj-card">
+          <div class="proj-card-bg"></div>
+          <div class="proj-card-body">
+            <div class="proj-card-header">
+              <h3>企业 SaaS 管理平台</h3>
+              <i class="fas fa-cloud" style="color: var(--clay);"></i>
+            </div>
+            <p>基于 React + Node.js 的全栈企业管理平台，涵盖权限管理、数据看板、报表生成等核心模块。支持多租户架构，日均处理请求 10 万+。</p>
           </div>
-        </a>
-        <a href="https://github.com/yourname" class="contact-item">
-          <div class="contact-icon">🐙</div>
-          <div>
-            <strong>GitHub</strong>
-            <p>@yourname</p>
-          </div>
-        </a>
-        <a href="#" class="contact-item">
-          <div class="contact-icon">💬</div>
-          <div>
-            <strong>微信</strong>
-            <p>yourname_wx</p>
-          </div>
-        </a>
+        </article>
+
       </div>
     </div>
   </section>
 
+  <!-- ======== Footer ======== -->
   <footer class="footer">
-    <p>© 2026 墨迹 · 用 ❤️ 和代码构建</p>
-    <p class="footer-host">托管于 <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
+    <div class="container footer-inner">
+      <p>© 2026 李明远</p>
+      <p class="footer-tagline">用代码创造优雅的数字体验</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
